@@ -1,0 +1,111 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.description {
+    padding: 20px;
+    margin-bottom: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 2em; /* Adjusted font size */
+    color: #fff;
+    margin-bottom: 10px; /* Reduced margin */
+}
+
+p {
+    font-size: 0.9em; /* Adjusted font size */
+    color: #fff;
+    margin-bottom: 20px; /* Reduced margin */
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+/* Background Animation */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.glow {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(45deg, rgba(255, 0, 204, 0.5), rgba(51, 51, 255, 0.5));
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.6;
+    animation: float 6s infinite ease-in-out;
+}
+
+.glow:nth-child(2) {
+    background: linear-gradient(45deg, rgba(51, 255, 204, 0.5), rgba(255, 51, 51, 0.5));
+    width: 400px;
+    height: 400px;
+    top: 50%;
+    left: 20%;
+    animation-delay: -3s;
+}
+
+.glow:nth-child(3) {
+    background: linear-gradient(45deg, rgba(255, 255, 51, 0.5), rgba(51, 255, 102, 0.5));
+    width: 500px;
+    height: 500px;
+    top: 70%;
+    left: 70%;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) translateX(0);
+    }
+    50% {
+        transform: translateY(-20px) translateX(20px);
+    }
+}
